@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1030.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1030.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
    <children>
-      <Pane layoutX="-7.0" prefHeight="126.0" prefWidth="831.0" style="-fx-background-color: #DEEBFF;">
+      <Pane layoutX="-7.0" layoutY="-2.0" prefHeight="99.0" prefWidth="831.0" style="-fx-background-color: #DEEBFF;">
          <children>
             <Label alignment="TOP_CENTER" layoutX="244.0" layoutY="42.0" prefHeight="42.0" prefWidth="336.0" text="User Registration" textAlignment="CENTER">
                <font>
@@ -63,7 +63,7 @@
       </Label>
       <TextField layoutX="95.0" layoutY="689.0" prefHeight="42.0" prefWidth="505.0" style="-fx-background-radius: 10;" />
       <Button layoutX="470.0" layoutY="927.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="234.0" style="-fx-background-color: #0047B3; -fx-background-radius: 10;" text="Register" textFill="WHITE" />
-      <Button layoutX="77.0" layoutY="927.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="234.0" style="-fx-background-color: #0047B3; -fx-background-radius: 10;" text="Cancel" textFill="WHITE" />
+      <Button fx:id="cancelRegisterButton" layoutX="77.0" layoutY="927.0" mnemonicParsing="false" onAction="#cancelRegisterButtonAction" prefHeight="61.0" prefWidth="234.0" style="-fx-background-color: #0047B3; -fx-background-radius: 10;" text="Cancel" textFill="WHITE" />
       <Label layoutX="90.0" layoutY="764.0" style="-fx-font-weight: bold;" text="Registering as :">
          <font>
             <Font size="18.0" />
