@@ -1,24 +1,19 @@
 package controllers;
 
-import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Modality;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
+import exceptions.UsernameAlreadyExistsException;
+import services.UserService;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 
-
-public class LoginController{
+public class LoginController {
 
     @FXML
     private Button loginButton;
@@ -26,8 +21,31 @@ public class LoginController{
     @FXML
     private Button registerButton;
 
+    @FXML
 
-    public void loginButtonAction(ActionEvent event) throws IOException{
+    private TextField usernameTextField;
+
+
+    public void loginButtonAction(ActionEvent event) throws IOException, UsernameAlreadyExistsException {
+
+
+        String username;
+        username = usernameTextField.getText();
+        if(UserService.checkUserDoesNotAlreadyExist(username)==true){
+
+            System.out.println("new user");
+
+        }
+        if(UserService.checkUserDoesNotAlreadyExist(username)==false){
+
+            System.out.println("not new user");
+
+        }
+
+
+
+
+
 
 
     }
