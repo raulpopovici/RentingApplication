@@ -39,7 +39,7 @@ public class LoginController {
         }
 
 
-        else if(usernameTextField.getText().isEmpty() && passwordTextField.getText().isEmpty())
+        if(usernameTextField.getText().isEmpty() && passwordTextField.getText().isEmpty())
         {
             wronglogin.setText("Please enter your credentials ");
         }
