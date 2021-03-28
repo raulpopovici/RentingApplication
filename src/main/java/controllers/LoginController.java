@@ -7,7 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import exceptions.UsernameAlreadyExistsException;
+
 import services.UserService;
 
 import java.io.IOException;
@@ -22,33 +25,31 @@ public class LoginController {
     private Button registerButton;
 
     @FXML
-
     private TextField usernameTextField;
 
+    @FXML
+    private PasswordField passwordTextField;
 
-    public void loginButtonAction(ActionEvent event) throws IOException, UsernameAlreadyExistsException {
+    @FXML
+    private Label wronglogin;
 
-
-        String username;
-        username = usernameTextField.getText();
-        if(UserService.checkUserDoesNotAlreadyExist(username)==true){
-
-            System.out.println("new user");
-
-        }
-        if(UserService.checkUserDoesNotAlreadyExist(username)==false){
-
-            System.out.println("not new user");
-
+    public void loginButtonAction(ActionEvent event) throws IOException,UsernameAlreadyExistsException{
+        if (UserService.checkUserDoesNotAlreadyExist(usernameTextField.getText())==true){
+            wronglogin.setText("User or password are incorrect");
         }
 
 
-
-
-
+        else if(usernameTextField.getText().isEmpty() && passwordTextField.getText().isEmpty())
+        {
+            wronglogin.setText("Please enter your credentials ");
+        }
 
 
     }
+
+
+
+
     public void registerButtonAction(ActionEvent event) throws IOException{
 
             FXMLLoader fxmlLoader = new FXMLLoader();
