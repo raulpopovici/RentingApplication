@@ -46,11 +46,23 @@ public class UserService {
     public static boolean checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : users) {
             if (Objects.equals(username, user.getUsername()))
-                return false;
+                return true;
                 //throw new UsernameAlreadyExistsException(username);
         }
-        return true;
+        return false;
     }
+
+    public static boolean checkIfPassAndUserAreValid(String username,String password) throws UsernameAlreadyExistsException {
+        String encodedPass = encodePassword(username,password);
+        for (User user : users) {
+           if (username.equals(user.getUsername()) && encodedPass.equals(user.getPassword()))
+                return true;
+            //throw new UsernameAlreadyExistsException(username);
+       }
+        return false;
+    }
+
+
 
     private static void persistUsers() {
         try {

@@ -34,7 +34,7 @@ public class LoginController {
     private Label wronglogin;
 
     public void loginButtonAction(ActionEvent event) throws IOException,UsernameAlreadyExistsException{
-        if (UserService.checkUserDoesNotAlreadyExist(usernameTextField.getText())==true){
+        if (!UserService.checkIfPassAndUserAreValid(usernameTextField.getText(),passwordTextField.getText())){
             wronglogin.setText("User or password are incorrect");
         }
 
