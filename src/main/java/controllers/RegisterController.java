@@ -1,11 +1,10 @@
 package controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import exceptions.UsernameAlreadyExistsException;
+import javafx.stage.Stage;
 import services.UserService;
 
 public class RegisterController {
@@ -30,8 +29,14 @@ public class RegisterController {
     private TextField addressField;
 
     @FXML
+    private Label wronglogin;
+
+    @FXML
+    private Button cancelButton;
+
+    @FXML
     public void initialize() {
-        role.getItems().addAll("Client", "Admin");
+        role.getItems().addAll("Owner", "Client");
     }
 
     @FXML
@@ -42,5 +47,11 @@ public class RegisterController {
         } catch (UsernameAlreadyExistsException e) {
             //registrationMessage.setText(e.getMessage());
         }
+    }
+
+    @FXML
+    public void cancelButtonAction(){
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
     }
 }

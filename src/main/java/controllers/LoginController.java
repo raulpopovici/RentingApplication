@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -37,6 +38,19 @@ public class LoginController {
         if (!UserService.checkIfPassAndUserAreValid(usernameTextField.getText(),passwordTextField.getText())){
             wronglogin.setText("User or password are incorrect");
         }
+        else{
+            FXMLLoader fxmlLoaderOwnerMainPage = new FXMLLoader();
+            fxmlLoaderOwnerMainPage.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+            Scene scene = new Scene(fxmlLoaderOwnerMainPage.load());
+            Stage stage1 = new Stage();
+            stage1.setTitle("RellowOwner");
+            stage1.setScene(scene);
+            stage1.getIcons().add(new Image("rellow.jpg"));
+            stage1.show();
+            Stage stage = (Stage) loginButton.getScene().getWindow();
+            stage.close();
+
+        }
 
 
         if(usernameTextField.getText().isEmpty() && passwordTextField.getText().isEmpty())
@@ -54,20 +68,16 @@ public class LoginController {
 
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("/register.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(),823,1030);
+            Scene scene = new Scene(fxmlLoader.load(),826,933);
             Stage stage1 = new Stage();
             stage1.setTitle("Register");
             stage1.setScene(scene);
+            stage1.getIcons().add(new Image("rellow.jpg"));
             stage1.setResizable(false);
             stage1.show();
 
-
-
-
-
-
-
     }
+
 
 
 }
