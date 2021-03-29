@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/efb47cb1b4164d57847f93ce457d54f2.png" />
+                  <Image url="@rellow.jpg" />
                </image>
             </ImageView>
             <TextField alignment="CENTER" style="-fx-background-color: #DEEBFF;" text="Welcome back!">
@@ -31,7 +31,7 @@
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Downloads/icons8_Home_32px.png" />
+                        <Image url="@icons8_Home_32px.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -40,7 +40,7 @@
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Downloads/icons8_Person_32px.png" />
+                        <Image url="@icons8_Person_32px.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -49,7 +49,7 @@
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Downloads/icons8_Open_Envelope_32px.png" />
+                        <Image url="@icons8_Open_Envelope_32px.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -61,7 +61,7 @@
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Downloads/icons8_Sign_Out_32px.png" />
+                        <Image url="@icons8_Sign_Out_32px.png" />
                      </image>
                   </ImageView>
                </graphic>
