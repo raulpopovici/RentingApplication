@@ -40,7 +40,7 @@ public class LoginController {
         }
         else{
             FXMLLoader fxmlLoaderOwnerMainPage = new FXMLLoader();
-            fxmlLoaderOwnerMainPage.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+            fxmlLoaderOwnerMainPage.setLocation(getClass().getResource("/clientMainPage.fxml"));
             Scene scene = new Scene(fxmlLoaderOwnerMainPage.load());
             Stage stage1 = new Stage();
             stage1.setTitle("RellowOwner");
