@@ -1,13 +1,13 @@
 package controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,6 +27,15 @@ public class clientMainPageController {
     private Button reviewsButton;
 
 
+    @FXML
+    private Pane centrePane;
+
+    @FXML
+    private BorderPane borderPane;
+
+
+
+
 
 
     @FXML
@@ -38,7 +47,7 @@ public class clientMainPageController {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         primaryStage.setTitle("Rellow");
         primaryStage.setScene(new Scene(root, 737, 524));
-        primaryStage.getIcons().add(new Image("rellow.jpg"));
+        primaryStage.getIcons().add(new Image("images/rellow.jpg"));
         primaryStage.setResizable(false);
         primaryStage.show();
 
@@ -47,40 +56,30 @@ public class clientMainPageController {
 
 
 
+    @FXML
+    public void overViewButtonAction() {
 
-    public void overviewmouseEnterAction(MouseEvent mouseEvent) {
-        overviewButton.setStyle("-fx-background-color: #F6DAFE;");
-    }
 
-    public void overviewmouseExitAction(MouseEvent mouseEvent) {
-        overviewButton.setStyle("-fx-background-color: #DEEBFF;");
-    }
-
-    public void apartamentsmouseEnterAction(MouseEvent mouseEvent) {
-
-        apartamentsButtons.setStyle("-fx-background-color: #F6DAFE;");
-    }
-
-    public void apartamentsmouseExitAction(MouseEvent mouseEvent) {
-        apartamentsButtons.setStyle("-fx-background-color: #DEEBFF;");
-    }
-
-    public void reviewsmouseEnterAction(MouseEvent mouseEvent) {
-
-        reviewsButton.setStyle("-fx-background-color: #F6DAFE;");
 
     }
 
-    public void reviewsmouseExitAction(MouseEvent mouseEvent) {
-        reviewsButton.setStyle("-fx-background-color:#DEEBFF");
 
-    }
+    @FXML
+    public void apartamentsButtonsAction() throws IOException {
 
-    public void signoutmouseEnterAction(MouseEvent mouseEvent) {
-        signout.setStyle("-fx-background-color: #F6DAFE;");
-    }
 
-    public void signoutmouseExitAction(MouseEvent mouseEvent) {
-        signout.setStyle("-fx-background-color: #DEEBFF;");
+
+        FXMLLoader fxmlLoader = new FXMLLoader();
+
+        fxmlLoader.setLocation(getClass().getResource("/apartments.fxml"));
+
+        //Pane view = object.getPage("Screen1");
+
+        BorderPane view = fxmlLoader.load();
+
+        borderPane.setCenter(view);
+
+        //centrePane.setCenter(view);
+
     }
 }

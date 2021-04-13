@@ -34,12 +34,12 @@ public class UserService {
     }
 
     public static void addUser(String username, String password, String firstName,String lastName,String phoneNumber,String address,String role) throws UsernameAlreadyExistsException {
-        if(checkUserDoesNotAlreadyExist(username)){
+        if(!checkUserDoesNotAlreadyExist(username)){
             users.add(new User(username,encodePassword(username, password),firstName,lastName,phoneNumber,address,role));
             persistUsers();
 
-        }
 
+        }
 
     }
 
@@ -62,12 +62,28 @@ public class UserService {
         return false;
     }
 
+    public static String checkOwnerOrClient(String username,String password){
+
+        String encodedPass = encodePassword(username,password);
+        for(User user : users){
+            if (username.equals(user.getUsername()) && encodedPass.equals(user.getPassword())){
+                return user.getRole();
+
+            }
+
+        }
+
+        return "not";
+
+    }
+
 
 
     private static void persistUsers() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), users);
+
         } catch (IOException e) {
             throw new CouldNotWriteUsersException();
         }

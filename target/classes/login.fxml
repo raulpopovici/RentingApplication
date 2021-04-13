@@ -18,18 +18,18 @@
                 <TextField fx:id="usernameTextField" accessibleRole="IMAGE_VIEW" layoutX="49.0" layoutY="158.0" prefHeight="33.0" prefWidth="258.0" promptText="username" style="-fx-background-color: #ededed; -fx-background-radius: 10; -fx-border-width: 0; -fx-padding: 0 10;" />
                 <Label layoutX="48.0" layoutY="125.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="88.0" style="-fx-font-weight: bold;" text="Username:" />
                 <Label layoutX="48.0" layoutY="212.0" prefHeight="26.0" prefWidth="88.0" style="-fx-font-weight: bold;" text="Password:" />
-                <Button fx:id="loginButton" layoutX="101.0" layoutY="329.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #0047B3;" text="LOG IN" textFill="WHITE" />
+                <Button fx:id="loginButton" layoutX="101.0" layoutY="329.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #9FA4C4;" text="LOG IN" textFill="WHITE" />
                 <PasswordField fx:id="passwordTextField" layoutX="49.0" layoutY="246.0" prefHeight="33.0" prefWidth="258.0" promptText="password" style="-fx-background-color: #ededed; -fx-background-radius: 10; -fx-border-width: 0; -fx-padding: 0 10;" />
                 <Line endX="100.0" layoutX="52.0" layoutY="391.0" startX="85.0" />
                 <Line endX="100.0" layoutX="104.0" layoutY="391.0" startX="85.0" />
-                <Button fx:id="registerButton" layoutX="101.0" layoutY="416.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #0047B3;" text="REGISTER" textFill="WHITE" />
+                <Button fx:id="registerButton" layoutX="101.0" layoutY="416.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #9FA4C4;" text="REGISTER" textFill="WHITE" />
                 <Label layoutX="164.0" layoutY="382.0" style="-fx-font-weight: bold;" text="OR" />
             <Label fx:id="wronglogin" layoutX="35.0" layoutY="90.0" />
             </children>
         </Pane>
       <ImageView fitHeight="181.0" fitWidth="248.0" layoutX="47.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@rellow.jpg" />
+            <Image url="@images/rellow.jpg" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="47.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="Renting  has never been easier" wrappingWidth="234.9830722808838" />

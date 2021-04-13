@@ -42,13 +42,29 @@ public class LoginController {
             wronglogin.setText("User or password are incorrect");
         }
         else{
-            FXMLLoader fxmlLoaderOwnerMainPage = new FXMLLoader();
-            fxmlLoaderOwnerMainPage.setLocation(getClass().getResource("/clientMainPage.fxml"));
-            Scene scene = new Scene(fxmlLoaderOwnerMainPage.load());
+               String ROLE = UserService.checkOwnerOrClient(usernameTextField.getText(),passwordTextField.getText());
+
+               FXMLLoader fxmlLoader = new FXMLLoader();
+              if(ROLE.equals("Owner")){
+
+
+                  fxmlLoader.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+              }
+              else if(ROLE.equals("Client")){
+
+                  fxmlLoader.setLocation(getClass().getResource("/client.fxml"));
+
+              }
+              else{
+                  fxmlLoader.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+
+              }
+
+            Scene scene = new Scene(fxmlLoader.load());
             Stage stage1 = new Stage();
             stage1.setTitle("RellowOwner");
             stage1.setScene(scene);
-            stage1.getIcons().add(new Image("rellow.jpg"));
+           //stage1.getIcons().add(new Image("rellow.jpg"));
             stage1.show();
             Stage stage = (Stage) loginButton.getScene().getWindow();
             stage.close();
@@ -74,8 +90,9 @@ public class LoginController {
             Scene scene = new Scene(fxmlLoader.load(),826,933);
             Stage stage1 = new Stage();
             stage1.setTitle("Register");
+            scene.getStylesheets().add("/button.css");
             stage1.setScene(scene);
-            stage1.getIcons().add(new Image("rellow.jpg"));
+            stage1.getIcons().add(new Image("images/rellow.jpg"));
             stage1.setResizable(false);
             stage1.show();
 
