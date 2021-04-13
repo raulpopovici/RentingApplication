@@ -1,15 +1,18 @@
 package controllers;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.input.MouseEvent;
 import exceptions.UsernameAlreadyExistsException;
 
 import services.UserService;
@@ -39,13 +42,29 @@ public class LoginController {
             wronglogin.setText("User or password are incorrect");
         }
         else{
-            FXMLLoader fxmlLoaderOwnerMainPage = new FXMLLoader();
-            fxmlLoaderOwnerMainPage.setLocation(getClass().getResource("/ownerMainPage.fxml"));
-            Scene scene = new Scene(fxmlLoaderOwnerMainPage.load());
+               String ROLE = UserService.checkOwnerOrClient(usernameTextField.getText(),passwordTextField.getText());
+
+               FXMLLoader fxmlLoader = new FXMLLoader();
+              if(ROLE.equals("Owner")){
+
+
+                  fxmlLoader.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+              }
+              else if(ROLE.equals("Client")){
+
+                  fxmlLoader.setLocation(getClass().getResource("/client.fxml"));
+
+              }
+              else{
+                  fxmlLoader.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+
+              }
+
+            Scene scene = new Scene(fxmlLoader.load());
             Stage stage1 = new Stage();
             stage1.setTitle("RellowOwner");
             stage1.setScene(scene);
-            stage1.getIcons().add(new Image("rellow.jpg"));
+           //stage1.getIcons().add(new Image("rellow.jpg"));
             stage1.show();
             Stage stage = (Stage) loginButton.getScene().getWindow();
             stage.close();
@@ -71,13 +90,14 @@ public class LoginController {
             Scene scene = new Scene(fxmlLoader.load(),826,933);
             Stage stage1 = new Stage();
             stage1.setTitle("Register");
+            scene.getStylesheets().add("/button.css");
             stage1.setScene(scene);
-            stage1.getIcons().add(new Image("rellow.jpg"));
+            stage1.getIcons().add(new Image("images/rellow.jpg"));
             stage1.setResizable(false);
             stage1.show();
 
     }
-
-
-
 }
+
+
+
