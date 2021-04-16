@@ -1,5 +1,7 @@
 package usermodel;
 
+import java.util.Objects;
+
 public class Apartment {
 
     private String nrOfRooms;
@@ -75,4 +77,29 @@ public class Apartment {
     }
 
 
+    @Override
+    public int hashCode() {
+        int result = nrOfRooms.hashCode();
+        result = 31 * result + OwnerName.hashCode();
+        result = 31 * result + Description.hashCode();
+        result = 31 * result + price.hashCode();
+        result = 31 * result + Utilities.hashCode();
+        result = 31 * result + Address.hashCode();
+        result = 31 * result + price.hashCode();
+
+        return result;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Apartment{" +
+                "nrOfRooms='" + nrOfRooms + '\'' +
+                ", Utilities='" + Utilities + '\'' +
+                ", Address='" + Address + '\'' +
+                ", price='" + price + '\'' +
+                ", Description='" + Description + '\'' +
+                ", OwnerName='" + OwnerName + '\'' +
+                '}';
+    }
 }

@@ -1,5 +1,6 @@
 package controllers;
 
+import exceptions.UsernameAlreadyExistsException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,6 +10,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import services.ApartmentService;
+import usermodel.Apartment;
 
 import java.io.IOException;
 
@@ -78,6 +81,8 @@ public class clientMainPageController {
         BorderPane view = fxmlLoader.load();
 
         borderPane.setCenter(view);
+
+
 
         //centrePane.setCenter(view);
 

@@ -7,9 +7,12 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import services.ApartmentService;
 import services.UserService;
+import usermodel.User;
 
 import java.awt.*;
+import java.util.Objects;
 
 public class Main extends Application {
 
@@ -24,6 +27,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         UserService.loadUsersFromFile();
+        ApartmentService.loadAFromFile();
+
+
+
+        ApartmentService.addApartment();
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         primaryStage.setTitle("Rellow");
@@ -31,8 +39,8 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 737, 524));
         primaryStage.getIcons().add(new Image("images/rellow.jpg"));
         primaryStage.setResizable(false);
-
         primaryStage.show();
+
     }
 
 
