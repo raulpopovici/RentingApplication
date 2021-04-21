@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class ApartmentService {
 
-    private static List <Apartment> apartments;
+    public static List <Apartment> apartments;
     private static final Path APARTMENT_PATH = FileSystemService.getPathToFile("config", "apartments.json");
 
     public static void loadAFromFile() throws IOException{
@@ -44,6 +44,8 @@ public class ApartmentService {
     }
 
 
+
+
     private static void persistUsers() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -53,6 +55,8 @@ public class ApartmentService {
             throw new CouldNotWriteUsersException();
         }
     }
+
+
 
 
 
