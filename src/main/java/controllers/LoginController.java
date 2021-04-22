@@ -60,10 +60,12 @@ public class LoginController {
 
               }
 
-            Scene scene = new Scene(fxmlLoader.load());
+           // Scene scene = new Scene(fxmlLoader.load());
             Stage stage1 = new Stage();
             stage1.setTitle("RellowOwner");
-            stage1.setScene(scene);
+            stage1.setScene(new Scene(fxmlLoader.load(), 1400, 900));
+            //stage1.setScene();
+
            //stage1.getIcons().add(new Image("rellow.jpg"));
             stage1.show();
             Stage stage = (Stage) loginButton.getScene().getWindow();

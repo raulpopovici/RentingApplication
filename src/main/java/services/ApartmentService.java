@@ -38,7 +38,7 @@ public class ApartmentService {
 
     public static void addApartment(){
 
-        apartments.add(new Apartment("4","2 bathrooms","Str Ioan Matei Nr 435","500$","It is located in a nice neighbourhood","Raul Gonzalez"));
+        apartments.add(new Apartment("4","2 bathrooms","Str Ioan Slavici Nr 435 Timisoara","500$","It is located in a nice neighbourhood","Raul Gonzalez"));
         persistUsers();
 
     }

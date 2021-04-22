@@ -1,10 +1,5 @@
-/*.button:hover {*/
-/*    //-fx-background-color: #2EE59D;*/
-/*    -fx-box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);*/
-/*    //-fx-color: #fff;*/
-
-/*.button1 {*/
-/*    -fx-box-shadow: 0;*/
-/*}*/
+.hbox:hover{
+    -fx-background-color: #3f3e74;
+}
 
 

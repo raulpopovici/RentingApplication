@@ -2,14 +2,12 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane fx:id="searchPane" prefHeight="660.0" prefWidth="898.0" style="-fx-background-color: #31305e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.apartmentsController">
@@ -22,7 +20,7 @@
                   <Image url="@images/585e4ae1cb11b227491c3393.png" />
                </image>
             </ImageView>
-            <Button fx:id="searchButton" layoutX="675.0" layoutY="59.0" minWidth="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-opacity: 0;" text="Button" />
+            <Button fx:id="searchButton" layoutX="675.0" layoutY="59.0" minWidth="35.0" mnemonicParsing="false" onAction="#searchButtonAction" prefHeight="25.0" prefWidth="35.0" style="-fx-opacity: 0;" text="Button" />
          </children>
       </AnchorPane>
    </top>
@@ -32,19 +30,7 @@
             <Insets />
          </BorderPane.margin>
          <content>
-            <VBox fx:id="apartmentsLayout" prefHeight="502.0" prefWidth="896.0" style="-fx-background-color: #31305e;">
-               <children>
-                  <HBox prefHeight="53.0" prefWidth="892.0" style="-fx-background-color: #31305e;">
-                     <children>
-                        <Label fx:id="addressLayout" prefHeight="63.0" prefWidth="363.0" style="-fx-text-fill: #fff;" text="Str. Valiug">
-                           <HBox.margin>
-                              <Insets left="50.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label fx:id="priceLayout" prefHeight="57.0" prefWidth="259.0" style="-fx-text-fill: #fff;" text="Label" />
-                     </children>
-                  </HBox>
-               </children></VBox>
+            <VBox fx:id="apartmentsLayout" prefHeight="502.0" prefWidth="896.0" style="-fx-background-color: #31305e;" />
          </content>
       </ScrollPane>
    </center>

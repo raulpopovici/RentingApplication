@@ -31,7 +31,7 @@ public class Main extends Application {
 
 
 
-        ApartmentService.addApartment();
+        //ApartmentService.addApartment();
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         primaryStage.setTitle("Rellow");
