@@ -4,13 +4,14 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="searchPane" prefHeight="660.0" prefWidth="898.0" style="-fx-background-color: #31305e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.apartmentsController">
+<BorderPane fx:id="searchPane" prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: #31305e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.apartmentsController">
    <top>
       <AnchorPane prefHeight="156.0" prefWidth="898.0" BorderPane.alignment="CENTER">
          <children>
@@ -34,4 +35,13 @@
          </content>
       </ScrollPane>
    </center>
+   <right>
+      <AnchorPane prefHeight="567.0" prefWidth="628.0" style="-fx-background-color: #31305e; -fx-border-radius: 20; -fx-background-radius: 15;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#242125" height="53.61" radius="25.564999999999998" spread="0.37" width="50.65" />
+         </effect>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin></AnchorPane>
+   </right>
 </BorderPane>

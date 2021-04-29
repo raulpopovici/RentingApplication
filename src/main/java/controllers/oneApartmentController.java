@@ -16,4 +16,6 @@ public class oneApartmentController {
         priceLabel.setText(price);
 
     }
+
+
 }
