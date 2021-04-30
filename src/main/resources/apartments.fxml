@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -23,6 +24,9 @@
             </ImageView>
             <Button fx:id="searchButton" layoutX="675.0" layoutY="59.0" minWidth="35.0" mnemonicParsing="false" onAction="#searchButtonAction" prefHeight="25.0" prefWidth="35.0" style="-fx-opacity: 0;" text="Button" />
          </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
       </AnchorPane>
    </top>
    <center>
@@ -36,12 +40,41 @@
       </ScrollPane>
    </center>
    <right>
-      <AnchorPane prefHeight="567.0" prefWidth="628.0" style="-fx-background-color: #31305e; -fx-border-radius: 20; -fx-background-radius: 15;" BorderPane.alignment="CENTER">
+      <BorderPane fx:id="DescriptionPane" prefHeight="567.0" prefWidth="613.0" style="-fx-background-color: #31305e; -fx-background-radius: 20; -fx-border-radius: 15;" BorderPane.alignment="CENTER">
          <effect>
-            <DropShadow blurType="ONE_PASS_BOX" color="#242125" height="53.61" radius="25.564999999999998" spread="0.37" width="50.65" />
+            <DropShadow blurType="ONE_PASS_BOX" color="#242124" height="52.13" radius="25.195" spread="0.37" width="50.65" />
          </effect>
          <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </BorderPane.margin></AnchorPane>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </BorderPane.margin>
+         <bottom>
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #6d6875; -fx-text-fill: #fff; -fx-background-radius: 10;" text="Reserve" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="40.0" />
+               </BorderPane.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="21.0" layoutY="80.0" prefHeight="42.0" prefWidth="97.0" style="-fx-text-fill: #fff;" text="Adress: " />
+                  <Label layoutX="21.0" layoutY="136.0" prefHeight="42.0" prefWidth="97.0" style="-fx-text-fill: #fff;" text="Price/Night: " />
+                  <Label layoutX="21.0" layoutY="187.0" prefHeight="42.0" prefWidth="97.0" style="-fx-text-fill: #fff;" text="Utilities: " />
+                  <Label layoutX="21.0" layoutY="237.0" prefHeight="42.0" prefWidth="133.0" style="-fx-text-fill: #fff;" text="Number of rooms: " />
+                  <Label layoutX="21.0" layoutY="279.0" prefHeight="42.0" prefWidth="133.0" style="-fx-text-fill: #fff;" text="Owner: " />
+                  <Label layoutX="21.0" layoutY="329.0" prefHeight="42.0" prefWidth="133.0" style="-fx-text-fill: #fff;" text="Desription: " />
+                  <Label fx:id="addressLabel" layoutX="119.0" layoutY="86.0" prefHeight="31.0" prefWidth="488.0" text="Label" />
+                  <Label fx:id="priceLabel" layoutX="120.0" layoutY="142.0" prefHeight="31.0" prefWidth="485.0" text="Label" />
+                  <Label fx:id="utilitiesLabel" layoutX="120.0" layoutY="193.0" prefHeight="31.0" prefWidth="485.0" text="Label" />
+                  <Label fx:id="nrroomsLabel" layoutX="154.0" layoutY="243.0" prefHeight="31.0" prefWidth="278.0" text="Label" />
+                  <Label fx:id="ownerLabel" layoutX="88.0" layoutY="285.0" prefHeight="31.0" prefWidth="402.0" text="Label" />
+                  <Label fx:id="descriptionLabel" layoutX="106.0" layoutY="335.0" prefHeight="33.0" prefWidth="493.0" text="Label" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
    </right>
 </BorderPane>

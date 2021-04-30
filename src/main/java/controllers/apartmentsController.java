@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -27,9 +28,12 @@ public class apartmentsController implements Initializable {
     @FXML
     TextField searchBar;
 
+    @FXML
+    BorderPane searchPane;
+
 
     @FXML
-    public void searchButtonAction(){
+    public void searchButtonAction() throws IOException {
         int oke = 0;
 
         apartmentsLayout.getChildren().clear();
@@ -46,7 +50,7 @@ public class apartmentsController implements Initializable {
 
                     HBox hbox = fxmlLoader.load();
                     oneApartmentController ap = fxmlLoader.getController();
-                    ap.setData(apartment.getAddress(),apartment.getPrice());
+                    ap.setData(apartment.getAddress());
                     apartmentsLayout.getChildren().add(hbox);
 
 
@@ -69,7 +73,7 @@ public class apartmentsController implements Initializable {
 
                 HBox hbox = fxmlLoader.load();
                 oneApartmentController ap = fxmlLoader.getController();
-                ap.setData("We cound not find any apartments in this area","");
+                ap.setData("We cound not find any apartments in this area");
                 apartmentsLayout.getChildren().add(hbox);
 
 
@@ -79,9 +83,26 @@ public class apartmentsController implements Initializable {
         }
 
 
+//        FXMLLoader fxmlLoader = new FXMLLoader();
+//        fxmlLoader.setLocation(getClass().getResource("/apartmentFullDescription.fxml"));
+//
+//        BorderPane desc = fxmlLoader.load();
+//
+//        searchPane.setRight(desc);
+
+
+
+
     }
 
+    void doPls(){
 
+        System.out.println("boss");
+        //searchPane.getChildren().clear();
+
+
+
+    }
 
 
 
@@ -90,6 +111,8 @@ public class apartmentsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+
 
     }
 
