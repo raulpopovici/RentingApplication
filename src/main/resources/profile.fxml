@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: #31305e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.profileController">
+<BorderPane prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: #F7F9F9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.profileController">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1c7293; -fx-background-radius: 50;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #116C7A; -fx-background-radius: 50;" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="usernameProfile" layoutX="336.0" layoutY="121.0" prefHeight="36.0" prefWidth="625.0" style="-fx-text-fill: #fff;" text="Label" />
             <Label fx:id="firstnameProfile" layoutX="336.0" layoutY="165.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />

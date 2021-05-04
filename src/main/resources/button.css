@@ -1,13 +1,13 @@
 .button{
-    -fx-background-color: #31305e;
+    -fx-background-color: #62B2BC;
     -fx-text-fill: #fff;
 }
 
 .button:hover{
-    -fx-background-color: #3f3e74;
+    -fx-background-color: #68A4AA;
 }
 
 
 .button:hover{
-    -fx-background-color: #3f3e74;
+    -fx-background-color: #68A4AA;
 }
