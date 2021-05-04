@@ -87,4 +87,24 @@ public class clientMainPageController {
         //centrePane.setCenter(view);
 
     }
+
+    @FXML
+    public void profileButtonAction() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader();
+
+        fxmlLoader.setLocation(getClass().getResource("/profile.fxml"));
+
+        //Pane view = object.getPage("Screen1");
+
+        BorderPane view = fxmlLoader.load();
+
+        borderPane.setCenter(view);
+
+
+
+
+
+
+    }
 }

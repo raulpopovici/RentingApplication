@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -45,13 +46,20 @@ public class apartmentsController implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/oneApartment.fxml"));
 
+                FXMLLoader fxmlLoader1 = new FXMLLoader();
+                fxmlLoader1.setLocation(getClass().getResource("/apartmentDescription.fxml"));
+
 
                 try {
 
-                    HBox hbox = fxmlLoader.load();
+
+                    AnchorPane anchorPane  = fxmlLoader1.load();
+                    BorderPane  pane = fxmlLoader.load();
                     oneApartmentController ap = fxmlLoader.getController();
-                    ap.setData(apartment.getAddress());
-                    apartmentsLayout.getChildren().add(hbox);
+                    ap.setData(apartment.getAddress(),apartment.getUtilities(),apartment.getNrOfRooms(),apartment.getOwnerName(),apartment.getDescription(),apartment.getPrice());
+
+                    apartmentsLayout.getChildren().add(pane);
+                    apartmentsLayout.getChildren().add(anchorPane);
 
 
 
@@ -67,14 +75,14 @@ public class apartmentsController implements Initializable {
         if(oke == 0) {
 
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/oneApartment.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/apartmentDescription.fxml"));
 
             try {
 
-                HBox hbox = fxmlLoader.load();
-                oneApartmentController ap = fxmlLoader.getController();
-                ap.setData("We cound not find any apartments in this area");
-                apartmentsLayout.getChildren().add(hbox);
+                AnchorPane anchorPane  = fxmlLoader.load();
+                apartmentDescriptionController aux = fxmlLoader.getController();
+                aux.setDataDesc();
+                apartmentsLayout.getChildren().add(anchorPane);
 
 
             } catch (IOException e) {
@@ -83,22 +91,6 @@ public class apartmentsController implements Initializable {
         }
 
 
-//        FXMLLoader fxmlLoader = new FXMLLoader();
-//        fxmlLoader.setLocation(getClass().getResource("/apartmentFullDescription.fxml"));
-//
-//        BorderPane desc = fxmlLoader.load();
-//
-//        searchPane.setRight(desc);
-
-
-
-
-    }
-
-    void doPls(){
-
-        System.out.println("boss");
-        //searchPane.getChildren().clear();
 
 
 

@@ -37,6 +37,9 @@ public class LoginController {
     @FXML
     private Label wronglogin;
 
+    static String username;
+    static String password;
+
     public void loginButtonAction(ActionEvent event) throws IOException,UsernameAlreadyExistsException{
         if (!UserService.checkIfPassAndUserAreValid(usernameTextField.getText(),passwordTextField.getText())){
             wronglogin.setText("User or password are incorrect");
@@ -64,6 +67,9 @@ public class LoginController {
             Stage stage1 = new Stage();
             stage1.setTitle("RellowOwner");
             stage1.setScene(new Scene(fxmlLoader.load(), 1400, 900));
+            username = usernameTextField.getText();
+            password = passwordTextField.getText();
+
             //stage1.setScene();
 
            //stage1.getIcons().add(new Image("rellow.jpg"));
