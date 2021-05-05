@@ -1,8 +1,10 @@
 package controllers;
 
+import com.sun.prism.paint.Color;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Paint;
 
 public class apartmentDescriptionController {
 
@@ -15,7 +17,9 @@ public class apartmentDescriptionController {
 
     public void setDataDesc(){
 
-        LabelApane.setText("We have no apartment in this area");
+        LabelApane.setText("Unfortunately we have no apartments in this area.");
+        LabelApane.setStyle("-fx-text-fill: #000");
+        LabelApane.setStyle("-fx-font-size: 20");
 
 
     }
