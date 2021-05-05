@@ -37,8 +37,6 @@ public class UserService {
         if(!checkUserDoesNotAlreadyExist(username)){
             users.add(new User(username,encodePassword(username, password),firstName,lastName,phoneNumber,address,role));
             persistUsers();
-
-
         }
 
     }
@@ -46,8 +44,9 @@ public class UserService {
     public static boolean checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : users) {
             if (Objects.equals(username, user.getUsername()))
-                return true;
-                //throw new UsernameAlreadyExistsException(username);
+                throw new UsernameAlreadyExistsException(username);
+                //return true;
+
         }
         return false;
     }

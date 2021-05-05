@@ -35,6 +35,9 @@ public class RegisterController {
     private Button cancelButton;
 
     @FXML
+    private Label accountSuccesfullLabel;
+
+    @FXML
     public void initialize() {
         role.getItems().addAll("Owner", "Client");
     }
@@ -42,10 +45,14 @@ public class RegisterController {
     @FXML
     public void handleRegisterAction() {
         try {
+
             UserService.addUser(usernameField.getText(), passwordField.getText(), firstNameField.getText(), lastNameField.getText(), phoneNumberField.getText(), addressField.getText(), (String) role.getValue());
             //registrationMessage.setText("Account created successfully!");
+            accountSuccesfullLabel.setStyle("-fx-font-color: #000");
+
         } catch (UsernameAlreadyExistsException e) {
-            //registrationMessage.setText(e.getMessage());
+            accountSuccesfullLabel.setText(e.getMessage());
+            accountSuccesfullLabel.setStyle("-fx-font-color: #000");
         }
     }
 

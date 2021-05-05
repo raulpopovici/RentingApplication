@@ -71,5 +71,6 @@
       </Label>
       <ChoiceBox fx:id="role" layoutX="348.0" layoutY="794.0" prefHeight="27.0" prefWidth="116.0" style="-fx-border-radius: 10;" />
       <Button fx:id="cancelButton" layoutX="108.0" layoutY="840.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="52.0" prefWidth="205.0" style="-fx-background-color: #0047B3; -fx-background-radius: 10;" text="Cancel" textFill="#fff8f8" />
+      <Label fx:id="accountSuccesfullLabel" layoutX="245.0" layoutY="78.0" prefHeight="52.0" prefWidth="280.0" style="-fx-text-fill: #fff; -fx-font-size: 20;" text="Account created succesfully!" />
    </children>
 </AnchorPane>
