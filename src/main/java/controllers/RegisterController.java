@@ -1,5 +1,6 @@
 package controllers;
 
+import exceptions.EmptyFieldsException;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -43,18 +44,33 @@ public class RegisterController {
     }
 
     @FXML
-    public void handleRegisterAction() {
-        try {
+    public void handleRegisterAction(){
 
-            UserService.addUser(usernameField.getText(), passwordField.getText(), firstNameField.getText(), lastNameField.getText(), phoneNumberField.getText(), addressField.getText(), (String) role.getValue());
-            //registrationMessage.setText("Account created successfully!");
-            accountSuccesfullLabel.setText("Account created successfully!");
-            accountSuccesfullLabel.setStyle("-fx-font-color: #000");
 
-        } catch (UsernameAlreadyExistsException e) {
-            accountSuccesfullLabel.setText(e.getMessage());
-            accountSuccesfullLabel.setStyle("-fx-font-color: #000");
+        if(UserService.checkEmptyFields(usernameField.getText(), passwordField.getText(), firstNameField.getText(), lastNameField.getText(), phoneNumberField.getText(), addressField.getText(), (String) role.getValue())){
+
+            try {
+
+
+
+                UserService.addUser(usernameField.getText(), passwordField.getText(), firstNameField.getText(), lastNameField.getText(), phoneNumberField.getText(), addressField.getText(), (String) role.getValue());
+                //registrationMessage.setText("Account created successfully!");
+                accountSuccesfullLabel.setText("Account created successfully!");
+                accountSuccesfullLabel.setStyle("-fx-font-color: #000");
+
+            } catch (UsernameAlreadyExistsException e) {
+                accountSuccesfullLabel.setText(e.getMessage());
+                accountSuccesfullLabel.setStyle("-fx-font-color: #000");
+            }
         }
+        else{
+            accountSuccesfullLabel.setText("Please fill in all the fields!!");
+            accountSuccesfullLabel.setStyle("-fx-font-color: #000");
+
+
+        }
+
+
     }
 
     @FXML

@@ -45,12 +45,7 @@ public class ApartmentService {
 
     }
 
-    public static void checkEmptyFields(String passwordField,String usernameField,String role,String firstNameField,String lastNameField,String phoneNumberField,String addressField) throws EmptyFieldsException{
-        if(passwordField == null || usernameField == null || role == null || firstNameField == null || lastNameField == null || phoneNumberField == null || addressField == null){
-            throw new EmptyFieldsException();
-        }
 
-    }
 
 
 

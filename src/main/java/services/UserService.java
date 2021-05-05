@@ -2,6 +2,7 @@ package services;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import exceptions.EmptyFieldsException;
 import org.apache.commons.io.FileUtils;
 import exceptions.CouldNotWriteUsersException;
 import exceptions.UsernameAlreadyExistsException;
@@ -49,6 +50,14 @@ public class UserService {
 
         }
         return false;
+    }
+
+    public static boolean checkEmptyFields(String passwordField,String usernameField,String role,String firstNameField,String lastNameField,String phoneNumberField,String addressField){
+        if(passwordField.equals("")  || usernameField.equals("") || role == null || firstNameField.equals("")  || lastNameField.equals("")  || phoneNumberField.equals("")  || addressField.equals("") ){
+            return false;
+        }
+        return true;
+
     }
 
 
