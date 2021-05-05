@@ -48,6 +48,7 @@ public class RegisterController {
 
             UserService.addUser(usernameField.getText(), passwordField.getText(), firstNameField.getText(), lastNameField.getText(), phoneNumberField.getText(), addressField.getText(), (String) role.getValue());
             //registrationMessage.setText("Account created successfully!");
+            accountSuccesfullLabel.setText("Account created successfully!");
             accountSuccesfullLabel.setStyle("-fx-font-color: #000");
 
         } catch (UsernameAlreadyExistsException e) {

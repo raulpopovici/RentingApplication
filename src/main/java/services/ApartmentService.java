@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
 import exceptions.CouldNotWriteUsersException;
+import exceptions.EmptyFieldsException;
 import exceptions.UsernameAlreadyExistsException;
 import usermodel.Apartment;
 import usermodel.User;
@@ -15,6 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.EmptyStackException;
 import java.util.List;
 import java.util.Objects;
 
@@ -40,6 +42,13 @@ public class ApartmentService {
 
         apartments.add(new Apartment("4","2 bathrooms","Str Ioan Slavici Nr 435 Timisoara","500$","It is located in a nice neighbourhood","Raul Gonzalez"));
         persistUsers();
+
+    }
+
+    public static void checkEmptyFields(String passwordField,String usernameField,String role,String firstNameField,String lastNameField,String phoneNumberField,String addressField) throws EmptyFieldsException{
+        if(passwordField == null || usernameField == null || role == null || firstNameField == null || lastNameField == null || phoneNumberField == null || addressField == null){
+            throw new EmptyFieldsException();
+        }
 
     }
 

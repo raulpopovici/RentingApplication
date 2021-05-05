@@ -51,6 +51,8 @@ public class UserService {
         return false;
     }
 
+
+
     public static boolean checkIfPassAndUserAreValid(String username,String password) throws UsernameAlreadyExistsException {
         String encodedPass = encodePassword(username,password);
         for (User user : users) {
