@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import services.ApartmentService;
@@ -21,7 +22,7 @@ public class clientMainPageController {
     private Button signout;
 
     @FXML
-    private Button overviewButton;
+    private Button homeButton;
 
     @FXML
     private Button apartamentsButtons;
@@ -30,8 +31,6 @@ public class clientMainPageController {
     private Button reviewsButton;
 
 
-    @FXML
-    private Pane centrePane;
 
     @FXML
     private BorderPane borderPane;
@@ -60,9 +59,17 @@ public class clientMainPageController {
 
 
     @FXML
-    public void overViewButtonAction() {
+    public void homeButtonAction() throws IOException {
 
+        FXMLLoader fxmlLoader = new FXMLLoader();
 
+        fxmlLoader.setLocation(getClass().getResource("/overview.fxml"));
+
+        //Pane view = object.getPage("Screen1");
+
+        GridPane grid = fxmlLoader.load();
+
+        borderPane.setCenter(grid);
 
     }
 
