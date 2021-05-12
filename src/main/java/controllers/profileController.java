@@ -14,6 +14,9 @@ public class profileController implements Initializable {
 
     String profileUsername = LoginController.username;
     String profilePassword = LoginController.password;
+    static String firstName;
+    static String lastName;
+    static String phoneNumber;
 
     @FXML
     Label usernameProfile;
@@ -43,6 +46,12 @@ public class profileController implements Initializable {
                 lastnameProfile.setText(user.getLastName());
                 phonenumberProfile.setText(user.getPhoneNumber());
                 addressProfile.setText(user.getAddress());
+                firstName = user.getLastName();
+                lastName = user.getLastName();
+                phoneNumber = user.getPhoneNumber();
+
+
+
                 break;
 
             }
