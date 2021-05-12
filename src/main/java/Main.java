@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import services.ApartmentService;
+import services.OffersService;
 import services.UserService;
 import usermodel.User;
 
@@ -27,7 +28,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         UserService.loadUsersFromFile();
+
         ApartmentService.loadAFromFile();
+
+        OffersService.loadOffersFromFile();
+
+
 
 
 
