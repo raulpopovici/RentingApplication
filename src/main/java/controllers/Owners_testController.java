@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class Owners_testController {
     @FXML
-    private Button signout;
+    private Button signoutButton;
 
     @FXML
     private Button overviewButton;
@@ -41,6 +41,21 @@ public class Owners_testController {
         BorderPane view = fxmlLoader.load();
 
         borderPane.setCenter(view);
+
+    }
+
+    @FXML
+    private void signoutButtonAction() throws IOException {
+
+        Stage stage = (Stage) signoutButton.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        primaryStage.setTitle("Rellow");
+        primaryStage.setScene(new Scene(root, 737, 524));
+        primaryStage.getIcons().add(new Image("images/rellow.jpg"));
+        primaryStage.setResizable(false);
+        primaryStage.show();
 
     }
 }

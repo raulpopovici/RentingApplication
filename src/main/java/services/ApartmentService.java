@@ -38,9 +38,9 @@ public class ApartmentService {
         });
     }
 
-    public static void addApartment(){
+    public static void addApartment(String address,String price,String utilities,String nrofrooms,String owner,String description){
 
-        apartments.add(new Apartment("4","2 bathrooms","Str Ioan Slavici Nr 435 Timisoara","500$","It is located in a nice neighbourhood","Raul Gonzalez"));
+        apartments.add(new Apartment(nrofrooms,utilities,address,price,description,owner));
         persistUsers();
 
     }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="DescriptionPane" prefHeight="567.0" prefWidth="580.0" style="-fx-background-color: #116C7A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.apartment_addingController">
+   <bottom>
+      <Button fx:id="addapartment_done" mnemonicParsing="false" onAction="#reserveButtonAction" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #F7F9F9; -fx-text-fill: #000; -fx-background-radius: 10;" text="Add" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="21.0" layoutY="80.0" prefHeight="42.0" prefWidth="97.0" style="-fx-text-fill: #fff;" text="Adress: " />
+            <Label layoutX="21.0" layoutY="136.0" prefHeight="42.0" prefWidth="97.0" style="-fx-text-fill: #fff;" text="Price/Night: " />
+            <Label layoutX="21.0" layoutY="187.0" prefHeight="42.0" prefWidth="97.0" style="-fx-text-fill: #fff;" text="Utilities: " />
+            <Label layoutX="21.0" layoutY="237.0" prefHeight="42.0" prefWidth="133.0" style="-fx-text-fill: #fff;" text="Number of rooms: " />
+            <Label layoutX="21.0" layoutY="279.0" prefHeight="42.0" prefWidth="133.0" style="-fx-text-fill: #fff;" text="Owner: " />
+            <Label layoutX="21.0" layoutY="329.0" prefHeight="42.0" prefWidth="133.0" style="-fx-text-fill: #fff;" text="Desription: " />
+            <TextField fx:id="adresstextfield" layoutX="216.0" layoutY="89.0" prefHeight="25.0" prefWidth="186.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" />
+            <TextField fx:id="pricetextfield" layoutX="215.0" layoutY="145.0" prefHeight="25.0" prefWidth="187.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" />
+            <TextField fx:id="utilitiestextfield" layoutX="214.0" layoutY="196.0" prefHeight="25.0" prefWidth="188.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" />
+            <TextField fx:id="nrofroomstextfield" layoutX="214.0" layoutY="246.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" />
+            <TextField fx:id="ownertextfield" layoutX="213.0" layoutY="288.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" />
+            <TextField fx:id="descriptiontextfield" layoutX="213.0" layoutY="338.0" prefHeight="25.0" prefWidth="191.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

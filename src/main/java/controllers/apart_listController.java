@@ -3,10 +3,13 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import services.ApartmentService;
 import services.UserService;
 import usermodel.Apartment;
@@ -53,7 +56,7 @@ public class apart_listController implements Initializable {
 
                     BorderPane  pane = fxmlLoader.load();
                     apartment_viewController ap = fxmlLoader.getController();
-                    ap.setData(apartment.getAddress(),apartment.getUtilities(),apartment.getNrOfRooms(),apartment.getOwnerName(),apartment.getDescription(),apartment.getPrice());
+                    ap.setData(apartment.getAddress(),apartment.getPrice(),apartment.getUtilities(),apartment.getNrOfRooms(),apartment.getOwnerName(),apartment.getDescription());
 
                     apartmentsLayout.getChildren().add(pane);
 
@@ -86,7 +89,19 @@ public class apart_listController implements Initializable {
 //                e.printStackTrace();
 //            }
 //        }
+
+
     }
-
-
+    public void add_apartmentAction() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/apartment_adding.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),826,933);
+        Stage stage1 = new Stage();
+        stage1.setTitle("Add Apartment");
+        scene.getStylesheets().add("/button.css");
+        stage1.setScene(scene);
+        stage1.getIcons().add(new Image("images/rellow.jpg"));
+        stage1.setResizable(false);
+        stage1.show();
+    }
 }

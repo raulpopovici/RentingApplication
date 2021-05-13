@@ -29,6 +29,6 @@
       </ScrollPane>
    </center>
    <bottom>
-      <Button fx:id="add_apartment" mnemonicParsing="false" onAction="#add_apartment" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: #116C7A; -fx-background-radius: 10;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER" />
+      <Button fx:id="add_apartment" mnemonicParsing="false" onAction="#add_apartmentAction" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: #116C7A; -fx-background-radius: 10;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
