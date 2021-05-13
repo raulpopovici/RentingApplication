@@ -16,7 +16,7 @@
       </AnchorPane>
    </top>
    <center>
-      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F7F9F9;">
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="508.0" prefWidth="604.0" style="-fx-background-color: #F7F9F9;">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
@@ -28,9 +28,6 @@
          </padding>
       </ScrollPane>
    </center>
-   <right>
-      <AnchorPane prefHeight="567.0" prefWidth="548.0" style="-fx-background-color: #F7F9F9;" BorderPane.alignment="CENTER" />
-   </right>
    <bottom>
       <Button fx:id="add_apartment" mnemonicParsing="false" onAction="#add_apartment" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: #116C7A; -fx-background-radius: 10;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER" />
    </bottom>

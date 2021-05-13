@@ -38,7 +38,7 @@ public class apart_listController implements Initializable {
 
         for(Apartment apartment : ApartmentService.apartments){
 
-            if(apartment.getOwnerName().contains("Raul")){
+            if(apartment.getOwnerName().contains("")){
                 oke = 1;
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/apartment_view.fxml"));
@@ -47,13 +47,13 @@ public class apart_listController implements Initializable {
 //                fxmlLoader1.setLocation(getClass().getResource("/apartmentDescription.fxml"));
 
 
+
                 try {
 
 
-
                     BorderPane  pane = fxmlLoader.load();
-                    //oneApartmentController ap = fxmlLoader.getController();
-                    //ap.setData(apartment.getAddress(),apartment.getUtilities(),apartment.getNrOfRooms(),apartment.getOwnerName(),apartment.getDescription(),apartment.getPrice());
+                    apartment_viewController ap = fxmlLoader.getController();
+                    ap.setData(apartment.getAddress(),apartment.getUtilities(),apartment.getNrOfRooms(),apartment.getOwnerName(),apartment.getDescription(),apartment.getPrice());
 
                     apartmentsLayout.getChildren().add(pane);
 
