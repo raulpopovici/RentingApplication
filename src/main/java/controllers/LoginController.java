@@ -51,7 +51,7 @@ public class LoginController {
               if(ROLE.equals("Owner")){
 
 
-                  fxmlLoader.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+                  fxmlLoader.setLocation(getClass().getResource("/owners_test.fxml"));
               }
               else if(ROLE.equals("Client")){
 
@@ -59,7 +59,7 @@ public class LoginController {
 
               }
               else{
-                  fxmlLoader.setLocation(getClass().getResource("/ownerMainPage.fxml"));
+                  fxmlLoader.setLocation(getClass().getResource("/owners_test.fxml"));
 
               }
 
