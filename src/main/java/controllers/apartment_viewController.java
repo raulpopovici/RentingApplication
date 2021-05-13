@@ -19,16 +19,18 @@ public class apartment_viewController {
 
     @FXML
     private Label addressProfile;
+    @FXML
+    private Label priceLabel;
 
 
 
-    public void setData(String address,String utilities,String nrrooms, String ownerName,String description,String price){
+    public void setData(String address,String price,String utilities,String nrrooms, String ownerName,String description){
 
 
         usernameProfile.setText(address);
-        firstnameProfile.setText(utilities);
-        lastnameProfile.setText(nrrooms);
-        phonenumberProfile.setText(ownerName);
+        //firstnameProfile.setText();
+        lastnameProfile.setText(utilities);
+        phonenumberProfile.setText(nrrooms);
         addressProfile.setText(description);
 
 

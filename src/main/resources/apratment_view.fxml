@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: #F7F9F9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.apartment_viewController">
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #116C7A; -fx-background-radius: 50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="usernameProfile" layoutX="336.0" layoutY="121.0" prefHeight="36.0" prefWidth="625.0" style="-fx-text-fill: #fff;" text="Label" />
+            <Label fx:id="priceLabel" layoutX="336.0" layoutY="165.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
+            <Label fx:id="lastnameProfile" layoutX="336.0" layoutY="219.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
+            <Label layoutX="57.0" layoutY="121.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Adress" />
+            <Label layoutX="57.0" layoutY="165.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Price/Night" />
+            <Label layoutX="57.0" layoutY="219.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Utilities" />
+            <Label layoutX="57.0" layoutY="271.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Number of rooms" />
+            <Label fx:id="phonenumberProfile" layoutX="336.0" layoutY="271.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
+            <Label layoutX="57.0" layoutY="316.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Reviews" />
+            <Label fx:id="addressProfile" layoutX="336.0" layoutY="316.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
+            <Label layoutX="57.0" layoutY="375.0" text="Description" textFill="WHITE" />
+            <Label layoutX="336.0" layoutY="375.0" text="Label" textFill="WHITE" />
+            <Button fx:id="Delete" layoutX="407.0" layoutY="447.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="147.0" style="-fx-background-color: #F7F9F9; -fx-background-radius: 10;" text="Delete" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow color="#151822" height="26.93" radius="12.965" spread="0.38" width="26.93" />
+         </effect></AnchorPane>
+   </right>
+</BorderPane>

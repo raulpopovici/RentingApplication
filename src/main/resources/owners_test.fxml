@@ -35,7 +35,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="signout" mnemonicParsing="false" prefHeight="112.0" prefWidth="188.0" stylesheets="@button.css" text="SIGN OUT" GridPane.rowIndex="1">
+                  <Button fx:id="signoutButton" mnemonicParsing="false" onAction="#signoutButtonAction" prefHeight="112.0" prefWidth="188.0" stylesheets="@button.css" text="SIGN OUT" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fitHeight="92.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
