@@ -11,23 +11,23 @@ import services.UserService;
 public class RegisterController {
 
     @FXML
-    private Text registrationMessage;
+    public Text registrationMessage;
     @FXML
-    private PasswordField passwordField;
+    public PasswordField passwordField;
     @FXML
-    private TextField usernameField;
+    public TextField usernameField;
     @FXML
-    private ChoiceBox role;
+    public ChoiceBox role;
 
     @FXML
-    private TextField firstNameField;
+    public TextField firstNameField;
     @FXML
-    private TextField lastNameField;
+    public TextField lastNameField;
 
     @FXML
-    private TextField phoneNumberField;
+    public TextField phoneNumberField;
     @FXML
-    private TextField addressField;
+    public TextField addressField;
 
     @FXML
     private Label wronglogin;
@@ -36,7 +36,7 @@ public class RegisterController {
     private Button cancelButton;
 
     @FXML
-    private Label accountSuccesfullLabel;
+    public Label accountSuccesfullLabel;
 
     @FXML
     public void initialize() {
@@ -54,7 +54,7 @@ public class RegisterController {
 
 
                 UserService.addUser(usernameField.getText(), passwordField.getText(), firstNameField.getText(), lastNameField.getText(), phoneNumberField.getText(), addressField.getText(), (String) role.getValue());
-                //registrationMessage.setText("Account created successfully!");
+                registrationMessage.setText("Account created successfully!");
                 accountSuccesfullLabel.setText("Account created successfully!");
                 accountSuccesfullLabel.setStyle("-fx-font-color: #000");
 
@@ -63,6 +63,7 @@ public class RegisterController {
                 accountSuccesfullLabel.setStyle("-fx-font-color: #000");
             }
         }
+
         else{
             accountSuccesfullLabel.setText("Please fill in all the fields!!");
             accountSuccesfullLabel.setStyle("-fx-font-color: #000");
@@ -70,8 +71,11 @@ public class RegisterController {
 
         }
 
-
     }
+
+
+
+
 
     @FXML
     public void cancelButtonAction(){
