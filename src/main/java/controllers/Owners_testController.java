@@ -71,5 +71,17 @@ public class Owners_testController {
 
         borderPane.setCenter(view);
     }
+    @FXML
+    public  void customersButtonAction() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+
+        fxmlLoader.setLocation(getClass().getResource("/customers_list.fxml"));
+
+        //Pane view = object.getPage("Screen1");
+
+        BorderPane view = fxmlLoader.load();
+
+        borderPane.setCenter(view);
+    }
 
 }

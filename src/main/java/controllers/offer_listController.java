@@ -15,7 +15,7 @@ public class offer_listController {
     private Label nrofroomsLabel;
 
     @FXML
-    private Label DateLabel;
+    private Label dateLabel;
 
     @FXML
     private Label priceLabel;
@@ -29,7 +29,7 @@ public class offer_listController {
         nrofroomsLabel.setText(nrrooms);
         //descLabel.setText(description);
         priceLabel.setText(price);
-        DateLabel.setText(Date);
+        dateLabel.setText(Date);
     }
 
 }

@@ -64,7 +64,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="customersButton" mnemonicParsing="false" prefHeight="112.0" prefWidth="220.0" stylesheets="@button.css" text="Customers" GridPane.rowIndex="3">
+            <Button fx:id="customersButton" mnemonicParsing="false" onAction="#customersButtonAction" prefHeight="112.0" prefWidth="220.0" stylesheets="@button.css" text="Customers" GridPane.rowIndex="3">
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>

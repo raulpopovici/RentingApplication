@@ -43,7 +43,7 @@ public class customers_listController implements Initializable {
 
                     BorderPane pane = fxmlLoader.load();
                     offer_listController ap = fxmlLoader.getController();
-                    ap.setData(offer.getAddress(), offer.getPrice(), offer.getUtilities(), offer.getNrOfRooms(), offer.getOwnerName(), offer.getDate());
+                    //ap.setData(offer.getAddress(), offer.getPrice(), offer.getUtilities(), offer.getNrOfRooms(), offer.getOwnerName(), offer.getDate());
 
                     apartmentsLayout.getChildren().add(pane);
 

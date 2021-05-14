@@ -13,9 +13,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
-class OffersServiceTest {
-
-
+class ApartmentServiceTest {
     @BeforeAll
     public static void setupClass() throws IOException {
 
@@ -35,29 +33,22 @@ class OffersServiceTest {
         assertTrue(Files.exists(UserService.USERS_PATH));
     }
 
-
     @Test
-    void loadOffersFromFile() throws IOException {
-
-        OffersService.loadOffersFromFile();
+    public void loadAFromFile() throws IOException{
+        ApartmentService.loadAFromFile();
         assertTrue(Files.exists(UserService.USERS_PATH));
-
-
     }
-
     @Test
-    void addOffer() throws IOException {
-       // int aux = OffersService.getOffers().size();
+    public void addApartment()  throws IOException {
+        ApartmentService.loadAFromFile();
 
-        OffersService.loadOffersFromFile();
+        ApartmentService.addApartment("test211", "testPass","ASd" ,"Sad","Sdas","Asd");
 
-        OffersService.addOffer("test211", "testPass","ASd" ,"Sad","Sdas","Asd","ASD","ASd","DS","O fut pe mata");
-
-        assertNotNull(OffersService.offers);
+        assertNotNull(ApartmentService.apartments);
 
 
-        assertEquals( 1, OffersService.getOffers().size());
-
-
+        //assertEquals( 1, OffersService.getOffers().size());
     }
+
+
 }
