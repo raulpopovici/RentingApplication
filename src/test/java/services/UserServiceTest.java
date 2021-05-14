@@ -6,6 +6,7 @@ import exceptions.UsernameAlreadyExistsException;
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import usermodel.User;
@@ -22,13 +23,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserServiceTest {
 
-    @BeforeClass
-    public static void setupClass() {
-        FileSystemService.APPLICATION_FOLDER = ".test-rentingapp";
+    @BeforeAll
+    public static void setupClass() throws IOException {
+
+        FileSystemService.APPLICATION_FOLDER = ".test-renting-app";
         FileSystemService.initApplicationHomeDirIfNeeded();
+
     }
 
-    @Before
+    @BeforeEach
     public void setUp() throws IOException {
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomePath().toFile());
     }
@@ -72,7 +75,7 @@ class UserServiceTest {
 
     @Test
     public void testPasswordEncoding() {
-        assertNotEquals("testPass1", UserService.encodePassword("username1", "testPass1"));
+        assertNotEquals("testPass12", UserService.encodePassword("username1", "testPass1"));
     }
 
 
