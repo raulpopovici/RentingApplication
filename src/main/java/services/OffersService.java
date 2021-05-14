@@ -59,6 +59,11 @@ public class OffersService {
     }
 
 
+    public static List<Offer> getOffers() {
+        return offers;
+    }
+
+
 
 
 
