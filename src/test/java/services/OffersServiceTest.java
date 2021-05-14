@@ -51,7 +51,7 @@ class OffersServiceTest {
 
         OffersService.loadOffersFromFile();
 
-        OffersService.addOffer("test211", "testPass","ASd" ,"Sad","Sdas","Asd","ASD","ASd","DS");
+        OffersService.addOffer("test211", "testPass","ASd" ,"Sad","Sdas","Asd","ASD","ASd","DS","DAs");
 
         assertNotNull(OffersService.offers);
 

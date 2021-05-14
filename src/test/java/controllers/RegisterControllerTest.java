@@ -87,6 +87,7 @@ class RegisterControllerTest extends ApplicationTest {
 
 
         if(controller != null){
+
             controller.handleRegisterAction();
             assertEquals(5,UserService.getUsers().size());
             assertEquals("Account created successfully!",controller.accountSuccesfullLabel.getText());

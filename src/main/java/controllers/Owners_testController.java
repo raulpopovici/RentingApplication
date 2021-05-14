@@ -45,6 +45,19 @@ public class Owners_testController {
     }
 
     @FXML
+    public  void customersButtonAction() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+
+        fxmlLoader.setLocation(getClass().getResource("/customers_list.fxml"));
+
+        //Pane view = object.getPage("Screen1");
+
+        BorderPane view = fxmlLoader.load();
+
+        borderPane.setCenter(view);
+    }
+
+    @FXML
     private void signoutButtonAction() throws IOException {
 
         Stage stage = (Stage) signoutButton.getScene().getWindow();

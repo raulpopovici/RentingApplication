@@ -2,6 +2,7 @@ package controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import services.OffersService;
 import services.UserService;
 import usermodel.User;
@@ -26,6 +27,9 @@ public class oneApartmentController {
 
     @FXML
     private Label descriptionLabel;
+
+    @FXML
+    private TextField dateField;
 
 
     public String clientFirstName = profileController.firstName;
@@ -84,7 +88,7 @@ public class oneApartmentController {
             }
         }
 
-        OffersService.addOffer(nrOfRooms,Utilities,Address,Price,Description ,OwnerName,clientFirstName,clientLastName,clientPhoneNumber,Date);
+        OffersService.addOffer(nrOfRooms,Utilities,Address,Price,Description ,OwnerName,clientFirstName,clientLastName,clientPhoneNumber,dateField.getText());
 
     }
 

@@ -29,13 +29,15 @@ public class customers_listController implements Initializable {
 
         for (Offer offer : OffersService.offers) {
 
+            profileController a = new profileController();
+
+
+
             if (offer.getOwnerName().contains("")) {
-                oke = 1;
+
+
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/offer_list.fxml"));
-
-//                FXMLLoader fxmlLoader1 = new FXMLLoader();
-//                fxmlLoader1.setLocation(getClass().getResource("/apartmentDescription.fxml"));
 
 
                 try {

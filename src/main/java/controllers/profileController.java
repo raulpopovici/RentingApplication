@@ -12,6 +12,7 @@ import usermodel.User;
 
 public class profileController implements Initializable {
 
+
     String profileUsername = LoginController.username;
     String profilePassword = LoginController.password;
     static String firstName;
@@ -32,6 +33,22 @@ public class profileController implements Initializable {
 
     @FXML
     private Label addressProfile;
+
+    public  String getName(){
+
+        for(User user : UserService.users ){
+            if(user.getUsername().equals(profileUsername)){
+
+                return user.getLastName();
+
+
+            }
+
+        }
+
+        return "false";
+
+    }
 
 
 
