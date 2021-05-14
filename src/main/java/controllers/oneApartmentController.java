@@ -39,7 +39,7 @@ public class oneApartmentController {
     private String Price;
     private String Description;
     private String OwnerName;
-
+    private String Date;
 
 
 
@@ -84,7 +84,7 @@ public class oneApartmentController {
             }
         }
 
-        OffersService.addOffer(nrOfRooms,Utilities,Address,Price,Description ,OwnerName,clientFirstName,clientLastName,clientPhoneNumber);
+        OffersService.addOffer(nrOfRooms,Utilities,Address,Price,Description ,OwnerName,clientFirstName,clientLastName,clientPhoneNumber,Date);
 
     }
 

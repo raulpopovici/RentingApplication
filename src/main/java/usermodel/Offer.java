@@ -14,13 +14,14 @@ public class Offer {
     private String price;
     private String Description;
     private String OwnerName;
+    public String Date;
 
 
     public Offer(){
 
     }
 
-    public Offer(String nrOfRooms,String Utilities,String Address,String price,String Description,String OwnerName,String clientFirstName,String clientLastName,String clientPhoneNumber){
+    public Offer(String nrOfRooms,String Utilities,String Address,String price,String Description,String OwnerName,String clientFirstName,String clientLastName,String clientPhoneNumber,String Date){
 
 
         this.nrOfRooms =  nrOfRooms;
@@ -32,6 +33,7 @@ public class Offer {
         this.clientFirstName = clientFirstName;
         this.clientLastName = clientLastName;
         this.clientPhoneNumber = clientPhoneNumber;
+        this.Date = Date;
 
 
 
@@ -109,6 +111,10 @@ public class Offer {
         this.clientPhoneNumber = clientPhoneNumber;
     }
 
+    public String getDate() {return Date;}
+
+    public void setDate(String Date){this.Date=Date;}
+
     @Override
     public int hashCode() {
         int result = nrOfRooms.hashCode();
@@ -121,6 +127,7 @@ public class Offer {
         result = 31 * result + clientFirstName.hashCode();
         result = 31 * result + clientLastName.hashCode();
         result = 31 * result + clientPhoneNumber.hashCode();
+        result= 31 * result + Date.hashCode();
 
 
         return result;
@@ -139,6 +146,7 @@ public class Offer {
                 ",clientFirstName='" + clientFirstName + '\'' +
                 ",clientLastName='" + clientLastName + '\'' +
                 ",clientPhoneNumber='" + clientPhoneNumber + '\'' +
+                ",Date='"+ Date + '\'' +
                 '}';
     }
 }

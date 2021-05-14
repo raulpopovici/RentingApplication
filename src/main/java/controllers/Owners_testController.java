@@ -20,10 +20,10 @@ public class Owners_testController {
     private Button overviewButton;
 
     @FXML
-    private Button customerButton;
+    private Button customersButton;
 
     @FXML
-    private Button ProfileButton;
+    private Button profileButton;
 
 
 
@@ -58,4 +58,18 @@ public class Owners_testController {
         primaryStage.show();
 
     }
+    @FXML
+    public void profileButtonAction() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader();
+
+        fxmlLoader.setLocation(getClass().getResource("/profile.fxml"));
+
+        //Pane view = object.getPage("Screen1");
+
+        BorderPane view = fxmlLoader.load();
+
+        borderPane.setCenter(view);
+    }
+
 }
