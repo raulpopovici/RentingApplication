@@ -56,7 +56,6 @@
             <Button fx:id="apartamentsButtons" mnemonicParsing="false" onAction="#apartamentsButtonsAction" prefHeight="112.0" prefWidth="220.0" style="-fx-text-fill: #000;" stylesheets="@button.css" text="APARTMENTS" GridPane.rowIndex="3" />
             <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="112.0" prefWidth="220.0" style="-fx-text-fill: #000;" stylesheets="@button.css" text="PROFILE" GridPane.rowIndex="4" />
             <Button fx:id="homeButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="112.0" prefWidth="220.0" style="-fx-text-fill: #000;" stylesheets="@button.css" text="HOME" GridPane.rowIndex="2" />
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </left>

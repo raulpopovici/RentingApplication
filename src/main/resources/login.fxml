@@ -11,18 +11,18 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="527.0" maxWidth="737.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="737.0" style="-fx-background-color: cb997e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane maxHeight="527.0" maxWidth="737.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="737.0" style="-fx-background-color: #cb997e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
     <children>
-        <Pane layoutX="308.0" maxHeight="525.0" maxWidth="429.0" prefHeight="525.0" prefWidth="429.0" style="-fx-background-color: f0efeb;">
+        <Pane layoutX="308.0" maxHeight="525.0" maxWidth="429.0" prefHeight="525.0" prefWidth="429.0" style="-fx-background-color: #f0efeb;">
             <children>
                 <TextField fx:id="usernameTextField" accessibleRole="IMAGE_VIEW" layoutX="49.0" layoutY="158.0" prefHeight="33.0" prefWidth="258.0" promptText="username" style="-fx-background-color: #ffff; -fx-background-radius: 10; -fx-border-width: 0; -fx-padding: 0 10;" />
                 <Label layoutX="48.0" layoutY="125.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="88.0" style="-fx-font-weight: bold;" text="Username:" />
                 <Label layoutX="48.0" layoutY="212.0" prefHeight="26.0" prefWidth="88.0" style="-fx-font-weight: bold;" text="Password:" />
-                <Button fx:id="loginButton" layoutX="101.0" layoutY="329.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: cb997e;" stylesheets="@loginbuttons.css" text="LOG IN" textFill="WHITE" />
+                <Button fx:id="loginButton" layoutX="101.0" layoutY="329.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #cb997e;" stylesheets="@loginbuttons.css" text="LOG IN" textFill="WHITE" />
                 <PasswordField fx:id="passwordTextField" layoutX="49.0" layoutY="246.0" prefHeight="33.0" prefWidth="258.0" promptText="password" style="-fx-background-color: ffff; -fx-background-radius: 10; -fx-border-width: 0; -fx-padding: 0 10;" />
                 <Line endX="100.0" layoutX="52.0" layoutY="391.0" startX="85.0" />
                 <Line endX="100.0" layoutX="104.0" layoutY="391.0" startX="85.0" />
-                <Button fx:id="registerButton" layoutX="101.0" layoutY="416.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: cb997e;" stylesheets="@loginbuttons.css" text="REGISTER" textFill="WHITE" />
+                <Button fx:id="registerButton" layoutX="101.0" layoutY="416.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #cb997e;" stylesheets="@loginbuttons.css" text="REGISTER" textFill="WHITE" />
                 <Label layoutX="164.0" layoutY="382.0" style="-fx-font-weight: bold;" text="OR" />
             <Label fx:id="wronglogin" layoutX="35.0" layoutY="90.0" />
             </children>

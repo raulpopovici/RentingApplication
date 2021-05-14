@@ -41,6 +41,6 @@
       </ScrollPane>
    </center>
    <right>
-      <AnchorPane prefHeight="567.0" prefWidth="548.0" style="-fx-background-color: f0efeb;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="567.0" prefWidth="548.0" style="-fx-background-color: #f0efeb;" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>
