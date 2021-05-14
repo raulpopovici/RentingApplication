@@ -15,20 +15,21 @@ public class offer_listController {
     private Label nrofroomsLabel;
 
     @FXML
-    private Label descriptionLabel;
+    private Label DateLabel;
 
     @FXML
     private Label priceLabel;
 
-    public void setData(String address,String price,String utilities,String nrrooms, String ownerName,String description){
+    public void setData(String address,String price,String utilities,String nrrooms, String ownerName,String Date) {
 
 
         addressLabel.setText(address);
         //firstnameProfile.setText();
         utilitiesLabel.setText(utilities);
         nrofroomsLabel.setText(nrrooms);
-        descLabel.setText(description);
+        //descLabel.setText(description);
         priceLabel.setText(price);
-        reviewsLabel.setText(price);
+        DateLabel.setText(Date);
+    }
 
 }
