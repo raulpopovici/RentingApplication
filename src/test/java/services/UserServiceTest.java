@@ -24,7 +24,7 @@ class UserServiceTest {
 
     @BeforeClass
     public static void setupClass() {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration-example";
+        FileSystemService.APPLICATION_FOLDER = ".test-rentingapp";
         FileSystemService.initApplicationHomeDirIfNeeded();
     }
 

@@ -1,24 +1,29 @@
 package controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class apartment_viewController {
 
     @FXML
-    private Label usernameProfile;
+    private Label addressLabel;
 
     @FXML
-    private Label firstnameProfile;
+    private Label utilitiesLabel;
 
     @FXML
-    private Label lastnameProfile;
+    private Label nrofroomsLabel;
 
     @FXML
-    private Label phonenumberProfile;
+    private Label reviewsLabel;
 
     @FXML
-    private Label addressProfile;
+    private Label descLabel;
+
+    @FXML
+    private Button Delete;
+
     @FXML
     private Label priceLabel;
 
@@ -27,14 +32,14 @@ public class apartment_viewController {
     public void setData(String address,String price,String utilities,String nrrooms, String ownerName,String description){
 
 
-        usernameProfile.setText(address);
+        addressLabel.setText(address);
         //firstnameProfile.setText();
-        lastnameProfile.setText(utilities);
-        phonenumberProfile.setText(nrrooms);
-        addressProfile.setText(description);
+        utilitiesLabel.setText(utilities);
+        nrofroomsLabel.setText(nrrooms);
+        descLabel.setText(description);
+        priceLabel.setText(price);
+        reviewsLabel.setText(price);
 
-
-        //priceLabel.setText(price);
 
 
 
