@@ -8,19 +8,19 @@
 
 <BorderPane fx:id="searchPane" prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: #F7F9F9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.customers_listController">
    <top>
-      <AnchorPane prefHeight="156.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="156.0" prefWidth="898.0" style="-fx-background-color: f0efeb;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
       </AnchorPane>
    </top>
    <center>
-      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="508.0" prefWidth="604.0" style="-fx-background-color: #F7F9F9;">
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="508.0" prefWidth="604.0" style="-fx-background-color: f0efeb;">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
          <content>
-            <VBox fx:id="apartmentsLayout" prefHeight="502.0" prefWidth="896.0" style="-fx-background-color: #F7F9F9;" />
+            <VBox fx:id="apartmentsLayout" prefHeight="502.0" prefWidth="896.0" style="-fx-background-color: f0efeb;" />
          </content>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" />

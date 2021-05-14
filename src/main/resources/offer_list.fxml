@@ -7,35 +7,35 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: #F7F9F9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.offer_listController">
+<BorderPane prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: f0efeb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.offer_listController">
    <top>
-      <AnchorPane prefHeight="402.0" prefWidth="961.0" style="-fx-background-color: #116C7A; -fx-background-radius: 25;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="402.0" prefWidth="961.0" style="-fx-background-color: ddbea9; -fx-background-radius: 25;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="addressLabel" layoutX="336.0" layoutY="121.0" prefHeight="36.0" prefWidth="625.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label fx:id="utilitiesLabel" layoutX="336.0" layoutY="219.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label layoutX="57.0" layoutY="121.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Adress">
+            <Label fx:id="addressLabel" layoutX="336.0" layoutY="121.0" prefHeight="36.0" prefWidth="625.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label fx:id="utilitiesLabel" layoutX="336.0" layoutY="219.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label layoutX="57.0" layoutY="121.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Adress">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="57.0" layoutY="165.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Price/Night">
+            <Label layoutX="57.0" layoutY="165.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Price/Night">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="57.0" layoutY="219.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Utilities">
+            <Label layoutX="57.0" layoutY="219.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Utilities">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="57.0" layoutY="271.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Number of rooms">
+            <Label layoutX="57.0" layoutY="271.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Number of rooms">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label fx:id="nrofroomsLabel" layoutX="336.0" layoutY="271.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label fx:id="dateLabel" layoutX="336.0" layoutY="316.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label layoutX="57.0" layoutY="326.0" text="Date" textFill="WHITE">
+            <Label fx:id="nrofroomsLabel" layoutX="336.0" layoutY="271.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label fx:id="dateLabel" layoutX="336.0" layoutY="316.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label layoutX="57.0" layoutY="326.0" style="-fx-text-fill: #000;" text="Date" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label fx:id="priceLabel" layoutX="336.0" layoutY="169.0" prefHeight="29.0" prefWidth="383.0" text="Label" textFill="WHITE" />
+            <Label fx:id="priceLabel" layoutX="336.0" layoutY="169.0" prefHeight="29.0" prefWidth="383.0" style="-fx-text-fill: #000;" text="Label" textFill="WHITE" />
          </children>
          <BorderPane.margin>
             <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />

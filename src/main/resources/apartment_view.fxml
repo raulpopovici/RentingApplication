@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: #F7F9F9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.apartment_viewController">
+<BorderPane prefHeight="723.0" prefWidth="1049.0" style="-fx-background-color: f0efeb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.apartment_viewController">
    <right>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #116C7A; -fx-background-radius: 50;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: b7b7a4; -fx-background-radius: 50;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="addressLabel" layoutX="336.0" layoutY="121.0" prefHeight="36.0" prefWidth="625.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label fx:id="utilitiesLabel" layoutX="336.0" layoutY="219.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label layoutX="57.0" layoutY="121.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Adress" />
-            <Label layoutX="57.0" layoutY="165.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Price/Night" />
-            <Label layoutX="57.0" layoutY="219.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Utilities" />
-            <Label layoutX="57.0" layoutY="271.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Number of rooms" />
-            <Label fx:id="nrofroomsLabel" layoutX="336.0" layoutY="271.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label layoutX="57.0" layoutY="316.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #fff;" text="Reviews" />
-            <Label fx:id="reviewsLabel" layoutX="336.0" layoutY="316.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #fff;" text="Label" />
-            <Label layoutX="57.0" layoutY="375.0" text="Description" textFill="WHITE" />
-            <Label fx:id="descLabel" layoutX="336.0" layoutY="375.0" text="Label" textFill="WHITE" />
-            <Button fx:id="Delete" layoutX="407.0" layoutY="447.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="147.0" style="-fx-background-color: #F7F9F9; -fx-background-radius: 10;" text="Delete" />
+            <Label fx:id="addressLabel" layoutX="336.0" layoutY="121.0" prefHeight="36.0" prefWidth="625.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label fx:id="utilitiesLabel" layoutX="336.0" layoutY="219.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label layoutX="57.0" layoutY="121.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Adress" />
+            <Label layoutX="57.0" layoutY="165.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Price/Night" />
+            <Label layoutX="57.0" layoutY="219.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Utilities" />
+            <Label layoutX="57.0" layoutY="271.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Number of rooms" />
+            <Label fx:id="nrofroomsLabel" layoutX="336.0" layoutY="271.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label layoutX="57.0" layoutY="316.0" prefHeight="36.0" prefWidth="249.0" style="-fx-text-fill: #000;" text="Reviews" />
+            <Label fx:id="reviewsLabel" layoutX="336.0" layoutY="316.0" prefHeight="36.0" prefWidth="411.0" style="-fx-text-fill: #000;" text="Label" />
+            <Label layoutX="57.0" layoutY="375.0" style="-fx-text-fill: #000;" text="Description" textFill="WHITE" />
+            <Label fx:id="descLabel" layoutX="336.0" layoutY="375.0" style="-fx-text-fill: #000;" text="Label" textFill="WHITE" />
+            <Button fx:id="Delete" layoutX="407.0" layoutY="447.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="147.0" style="-fx-background-color: f0efeb; -fx-background-radius: 10;" text="Delete" />
             <Label fx:id="priceLabel" layoutX="336.0" layoutY="169.0" prefHeight="29.0" prefWidth="383.0" text="Label" />
          </children>
          <BorderPane.margin>

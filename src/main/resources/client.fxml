@@ -16,7 +16,7 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1146.0" style="-fx-background-color: #62B2BC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.clientMainPageController">
    <left>
-      <GridPane prefHeight="692.0" prefWidth="187.0" style="-fx-background-color: #62B2BC;" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="692.0" prefWidth="187.0" style="-fx-background-color: cb997e;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -39,8 +39,8 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="signout" mnemonicParsing="false" onAction="#signoutButtonAction" prefHeight="112.0" prefWidth="188.0" stylesheets="@button.css" text="SIGN OUT" GridPane.rowIndex="1" />
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #62B2BC;" />
+                  <Button fx:id="signout" mnemonicParsing="false" onAction="#signoutButtonAction" prefHeight="112.0" prefWidth="188.0" style="-fx-text-fill: #000;" stylesheets="@button.css" text="SIGN OUT" GridPane.rowIndex="1" />
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: cb997e;" />
                </children>
             </GridPane>
             <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
@@ -50,17 +50,18 @@
             </ImageView>
             <Pane GridPane.rowIndex="1">
                <children>
-                  <Label layoutX="34.0" layoutY="4.0" prefHeight="24.0" prefWidth="120.0" style="-fx-text-fill: #fff;" text="Welcome Back!" />
+                  <Label layoutX="34.0" layoutY="14.0" prefHeight="24.0" prefWidth="120.0" style="-fx-text-fill: #000;" text="Welcome Back!" />
                </children>
             </Pane>
-            <Button fx:id="homeButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="112.0" prefWidth="220.0" stylesheets="@button.css" text="HOME" GridPane.rowIndex="2" />
-            <Button fx:id="apartamentsButtons" mnemonicParsing="false" onAction="#apartamentsButtonsAction" prefHeight="112.0" prefWidth="220.0" stylesheets="@button.css" text="APARTMENTS" GridPane.rowIndex="3" />
-            <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="112.0" prefWidth="220.0" stylesheets="@button.css" text="PROFILE" GridPane.rowIndex="4" />
+            <Button fx:id="apartamentsButtons" mnemonicParsing="false" onAction="#apartamentsButtonsAction" prefHeight="112.0" prefWidth="220.0" style="-fx-text-fill: #000;" stylesheets="@button.css" text="APARTMENTS" GridPane.rowIndex="3" />
+            <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="112.0" prefWidth="220.0" style="-fx-text-fill: #000;" stylesheets="@button.css" text="PROFILE" GridPane.rowIndex="4" />
+            <Button fx:id="homeButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="112.0" prefWidth="220.0" style="-fx-text-fill: #000;" stylesheets="@button.css" text="HOME" GridPane.rowIndex="2" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </left>
    <center>
-      <GridPane style="-fx-background-color: #F7F9F9;" BorderPane.alignment="CENTER">
+      <GridPane style="-fx-background-color: f0efeb;" BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="812.0" minWidth="10.0" prefWidth="345.0000305175781" />
           <ColumnConstraints hgrow="ALWAYS" maxWidth="812.0" minWidth="10.0" prefWidth="593.9999694824219" />
@@ -88,7 +89,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F7F9F9;" GridPane.rowIndex="2">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: f0efeb;" GridPane.rowIndex="2">
                <children>
                   <AnchorPane layoutX="27.0" layoutY="263.0" prefHeight="231.0" prefWidth="336.0" style="-fx-background-color: #F7F9F9; -fx-border-color: #000; -fx-border-radius: 20; -fx-background-radius: 25;">
                      <children>
