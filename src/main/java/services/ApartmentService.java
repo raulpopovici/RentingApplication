@@ -41,7 +41,7 @@ public class ApartmentService {
     public static void addApartment(String address,String price,String utilities,String nrofrooms,String owner,String description){
 
         apartments.add(new Apartment(nrofrooms,utilities,address,price,description,owner));
-        persistUsers();
+        persistApartments();
 
     }
 
@@ -50,7 +50,7 @@ public class ApartmentService {
 
 
 
-    private static void persistUsers() {
+    public static void persistApartments() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(APARTMENT_PATH.toFile(), apartments);

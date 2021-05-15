@@ -73,6 +73,7 @@ public class apart_listController implements Initializable {
 
     }
     public void add_apartmentAction() throws IOException {
+
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/apartment_adding.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),826,933);

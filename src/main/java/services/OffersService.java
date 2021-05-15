@@ -44,11 +44,11 @@ public class OffersService {
     public static void addOffer(String nrrooms,String utilities,String address,String price, String description ,String ownername, String clientFirstName,String clientLastName,String clientPhoneNumber,String Date){
 
         offers.add(new Offer(nrrooms,utilities,address,price,description ,ownername,clientFirstName,clientLastName,clientPhoneNumber,Date));
-        persistUsers();
+        persistOffers();
 
     }
 
-    private static void persistUsers() {
+    private static void persistOffers() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(OFFER_PATH.toFile(), offers);
