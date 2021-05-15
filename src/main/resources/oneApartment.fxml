@@ -32,6 +32,8 @@
             <Label fx:id="descriptionLabel" layoutX="106.0" layoutY="335.0" prefHeight="33.0" prefWidth="493.0" text="Label" />
             <TextField fx:id="dateField" layoutX="199.0" layoutY="427.0" prefHeight="31.0" prefWidth="209.0" style="-fx-background-color: f0efeb; -fx-border-color: #fff; -fx-border-radius: 20; -fx-background-radius: 25;" />
             <Label layoutX="199.0" layoutY="395.0" prefHeight="32.0" prefWidth="264.0" style="-fx-text-fill: #fff;" text="Enter the period of your reservation:" />
+            <Label layoutX="21.0" layoutY="371.0" prefHeight="24.0" prefWidth="83.0" style="-fx-text-fill: #000;" text="Review" />
+            <Label layoutX="101.0" layoutY="373.0" text="8.5/10" />
          </children>
       </AnchorPane>
    </center>

@@ -26,6 +26,7 @@ public class Apartment {
         this.Description = Description;
         this.OwnerName = OwnerName;
 
+
    }
 
     public String getNrOfRooms() {
