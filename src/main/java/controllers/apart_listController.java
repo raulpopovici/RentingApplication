@@ -30,24 +30,21 @@ public class apart_listController implements Initializable {
     @FXML
     private Button add_apartment;
 
-    @FXML
-    void add_apartment(){
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        int oke = 0;
+
+        profileController aux = new profileController();
+
+        String name = aux.getName();
 
         for(Apartment apartment : ApartmentService.apartments){
 
-            if(apartment.getOwnerName().contains("")){
-                oke = 1;
+            if(apartment.getOwnerName().contains(name)){
+
+
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/apartment_view.fxml"));
-
-//                FXMLLoader fxmlLoader1 = new FXMLLoader();
-//                fxmlLoader1.setLocation(getClass().getResource("/apartmentDescription.fxml"));
 
 
 
@@ -72,23 +69,6 @@ public class apart_listController implements Initializable {
 
         }
 
-//        if(oke == 0) {
-//
-//            FXMLLoader fxmlLoader = new FXMLLoader();
-//            fxmlLoader.setLocation(getClass().getResource("/apartmentDescription.fxml"));
-//
-//            try {
-//
-//                AnchorPane anchorPane  = fxmlLoader.load();
-//                apartmentDescriptionController aux = fxmlLoader.getController();
-//                aux.setDataDesc();
-//                apartmentsLayout.getChildren().add(anchorPane);
-//
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
 
 
     }

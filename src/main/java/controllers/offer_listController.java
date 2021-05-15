@@ -20,7 +20,13 @@ public class offer_listController {
     @FXML
     private Label priceLabel;
 
-    public void setData(String address,String price,String utilities,String nrrooms, String ownerName,String Date) {
+    @FXML
+    private Label clientFN;
+
+    @FXML
+    private Label clientLN;
+
+    public void setData(String address,String price,String utilities,String nrrooms, String ownerName,String Date,String firstname,String lastname) {
 
 
         addressLabel.setText(address);
@@ -32,6 +38,10 @@ public class offer_listController {
         priceLabel.setText(price);
 
         dateLabel.setText(Date);
+
+        clientFN.setText(firstname);
+
+        clientLN.setText(lastname);
     }
 
 }

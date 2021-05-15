@@ -43,12 +43,6 @@ public class apartment_viewController {
 
 
 
-//        nrOfRooms = nrrooms;
-//        Utilities = utilities;
-//        Address = address;
-//        Price =  price;
-//        Description = description;
-//        OwnerName = ownerName;
 
 
 

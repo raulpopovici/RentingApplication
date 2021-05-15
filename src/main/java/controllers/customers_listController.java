@@ -27,13 +27,17 @@ public class customers_listController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         int oke = 0;
 
+        profileController aux = new profileController();
+
+        String name = aux.getName();
+
         for (Offer offer : OffersService.offers) {
 
             profileController a = new profileController();
 
 
 
-            if (offer.getOwnerName().contains("")) {
+            if (offer.getOwnerName().contains(name)) {
 
 
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -45,7 +49,7 @@ public class customers_listController implements Initializable {
 
                     BorderPane pane = fxmlLoader.load();
                     offer_listController ap = fxmlLoader.getController();
-                    ap.setData(offer.getAddress(), offer.getPrice(), offer.getUtilities(), offer.getNrOfRooms(), offer.getOwnerName(), offer.getDate());
+                    ap.setData(offer.getAddress(), offer.getPrice(), offer.getUtilities(), offer.getNrOfRooms(), offer.getOwnerName(), offer.getDate(),offer.getClientFirstName(), offer.getClientLastName());
 
                     apartmentsLayout.getChildren().add(pane);
 
