@@ -53,7 +53,7 @@ class UserServiceTest {
     }
 
     @Test
-    void addUser() throws IOException, UsernameAlreadyExistsException {
+    public void addUser() throws IOException, UsernameAlreadyExistsException {
 
         int aux = UserService.getUsers().size();
         UserService.loadUsersFromFile();
